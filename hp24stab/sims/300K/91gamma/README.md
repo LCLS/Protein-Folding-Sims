@@ -26,3 +26,10 @@ File folded.pdb is 4cz4.pdb without the ACE and NME HETATMs
 run by pdbfixer
 
 simulateFoldedPdb.py shows how to run a simulation of folded.pdb
+
+# TPR Creation
+1) pdb2gmx -ignh -f input.pdb -o villin.gro -p villin.top -water none -ff amber99sb
+
+2) editconf -f villin.gro -o villin_box.gro -c -d 1.0 -bt cubic
+
+3) grompp -f md.mdp -c villin_box.gro -p villin.top -o villin.tpr
