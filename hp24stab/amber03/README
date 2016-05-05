@@ -1,0 +1,17 @@
+This contains input script and coordinates for hp24stab simulations using Amber03
+This force field is better at folding alpha helices than Amber99SB 
+
+CUDA has the script to run on a CUDA device
+OPENCL has the script to run on an OpenCL device
+
+Set the CudaDevice or OpenCLDevice to the right number for your device
+
+sim1 through sim4 have the results of 4 different simulations run using the CUDA version of OpenMM 6.3:
+the eps is the result of Timeline -> Calculate Secondary Structure in VMD for about 800 ns of simulation written every 2 ns
+
+rmsd_helix1.csv calculates backbone rmsd of helix 1 using Jeff Kinnisson's definition in rmsdh1.tcl
+rmsd_helix2.csv similarly for helix 2 using rmsdh2.tcl
+rmsd_all.csv is the protein starting at helix 1 and ending at helix 2 using rmsdall.tcl
+
+
+
